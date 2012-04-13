@@ -1,0 +1,30 @@
+
+aciFishEye - Cross-browser FishEye menu with jQuery and CSS.
+
+It's not too much to explain, allmost 100% of the implementation must be done in HTML/CSS,
+the plugin itself only provides the means to resize the menu items based on mouse position.
+Make sure you provide a non-JavaScript version (check the examples with JS disabled in your browser
+to see it working, also you can try check the examples in a 'transition' enabled browser
+to be able to see the CSS effects on mouse over/out).
+
+Simple usage:
+
+$().ready(function(){
+
+    $('.fishEye').aciFishEye();
+
+});
+
+Note: this is for the HTML structure and the CSS that came with the examples.
+Check them (and the plugin initialization options) too see how can achieve the FishEye menu
+with other HTML structure and other CSS rules, depending on your needs.
+
+aciFishEye jQuery Plugin v1.0
+http://acoderinsights.ro
+
+Copyright (c) 2012 Dragos Ursu
+Dual licensed under the MIT or GPL Version 2 licenses.
+
+Require jQuery Library http://jquery.com
+
+Date: Fri Apr 6 19:15 2012 +0200

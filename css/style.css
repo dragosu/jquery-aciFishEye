@@ -1,0 +1,43 @@
+body {
+	margin:0;
+	padding:40px;	
+}
+/* box style */
+.box {
+	border:4px solid #999;
+	position:relative;
+	width:650px;
+	height:550px;
+	margin:20px;
+	float:left;
+}
+.box .aciVFish, .box .aciHFish {
+	position:absolute;
+}
+.box .aciVFish.aciLeft {
+	left:0;
+	top:70px;
+}
+.box .aciVFish.aciCenter {
+	left:100px;
+	top:70px;	
+}
+.box .aciVFish.aciRight {
+	right:0;
+	top:70px;
+}
+.box .aciHFish.aciTop {
+	left:170px;
+	top:0;
+}
+.box .aciHFish.aciCenter {
+	left:170px;
+	top:420px;	
+}
+.box .aciHFish.aciBottom {
+	left:170px;
+	bottom:0;
+}
+.box.sample .aciVFish li, .box.sample .aciVFish img, .box.sample .aciHFish li, .box.sample .aciHFish img {
+	border:1px solid #F00;
+}

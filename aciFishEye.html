@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>aciFishEye - Fixed version - FishEye menu with jQuery</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/aciFishEye.css" media="all" />
+<noscript>
+<link rel="stylesheet" type="text/css" href="css/aciFishEye-nojs.css" media="all" />
+</noscript>
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.aciFishEye.js" type="text/javascript"></script>
+</head><body>
+    <p>Here is the 'fixed' size demo, the &lt;li&gt; keep the same size and the image grow/shrink in the space of the &lt;li&gt; element.<br />
+        Disable JavaScript in your browser to see it in action with CSS. I have made the CSS to use transitions if available (see the 'aciFishEye-nojs.css' CSS file).<br />
+        The 'aciFishEye-nojs.css' file must be included after the CSS for the FishEye and only when JavaScript is not available (see the &lt;noscript&gt; tag).<br />
+        The right side 'box' show you (by the red borders) how elements grow and shrink depending on the mouse position (and how 'margin-left'/'margin-top' CSS rules are used).<br />
+        The example here implements the 'display' callback to center the tooltips on buttons (for the horizontal FishEye). Note that you probably can make this with some extra HTML/CSS but I took the easy path
+        and also wanted to show you how the 'display' callback can work.</p>
+    <p>Note that because of the plugin flexibility you can have your own HTML structure (see plugin init options) and your own CSS rules. I recommend you to first implement
+    the CSS version (with JavaScript disabled) and then go with the JavaScript version.<br />
+    With the 'display' callback you can also show/hide things outside of the FishEye container
+    and not only how it's implemented by default.</p>
+    <p>The minimum button size is read from the CSS rules, the maximum you set using plugin init options.
+        Also, the horizontal FishEye must have the 'float' CSS property set to 'left' or 'right' on the 'block' element (&lt;li&gt; in our case, see plugin init options).</p>
+    <p>You can see a demo <a href="aciFishEye-dynamic.html" title="aciFishEye dynamic size">here</a> for the dynamic version.</p>
+<div class="box">
+  <ul class="aciVFish aciLeft">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciVFish aciCenter">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciVFish aciRight">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciHFish aciTop">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciHFish aciCenter">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciHFish aciBottom">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+</div>
+<div class="box sample">
+  <ul class="aciVFish aciLeft">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciVFish aciCenter">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciVFish aciRight">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciHFish aciTop">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciHFish aciCenter">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+  <ul class="aciHFish aciBottom">
+    <li><a href="#" title=""><img src="image/tux.png" border="0" alt="" /></a><span>Tux</span></li>
+    <li><a href="#" title=""><img src="image/Papier.png" border="0" alt="" /></a><span>Edit</span></li>
+    <li><a href="#" title=""><img src="image/Movie.png" border="0" alt="" /></a><span>Movie</span></li>
+    <li><a href="#" title=""><img src="image/xpaint.png" border="0" alt="" /></a><span>Paint</span></li>
+    <li><a href="#" title=""><img src="image/xmms.png" border="0" alt="" /></a><span>Sound</span></li>
+    <li><a href="#" title=""><img src="image/encrypted.png" border="0" alt="" /></a><span>Locked</span></li>
+    <li><a href="#" title=""><img src="image/Bin.png" border="0" alt="" /></a><span>Recycle</span></li>
+  </ul>
+</div>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	// implement 'display' callback to center horizontal tooltips
+    $('.aciVFish,.aciHFish').aciFishEye({
+        'show': 'span',
+        'display': function(element, show, speed){
+            if (show)
+            {
+                var li = element.eq(0).parents('li:first');
+                if ((li.css('float') == 'left') || (li.css('float') == 'right'))
+                {
+                    // for horizontal change left value
+                    element.stop().hide().css({
+                        'left': (50 - element.width()) / 2 - 4 + 'px',
+                        'opacity': 1
+                    }).fadeIn(speed);
+                }
+                else
+                {
+                    element.stop().hide().css('opacity', 1).fadeIn(speed);
+                }
+            }
+            else
+            {
+                element.stop().fadeOut(speed);
+            }
+        }
+    });
+
+	// destroy the control
+    //$('.aciVFish,.aciHFish').aciFishEye('destroy');
+
+	// show init options
+    var options = $('.aciVFish:first').aciFishEye('options');
+    for (var i in options)
+    {
+        //alert(i + ' ' + options[i]);
+    }
+
+});
+
+</script>
+</body>
+</html>

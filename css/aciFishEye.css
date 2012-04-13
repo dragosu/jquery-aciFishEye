@@ -1,0 +1,73 @@
+/* global */
+.aciVFish img, .aciHFish img  {
+	width:30px;
+	height:30px;
+	margin:10px 0 0 10px;
+}
+.aciVFish a, .aciHFish a {
+	display:block;
+	width:50px;
+	height:50px;
+}
+.aciVFish.aciLeft span, .aciVFish.aciCenter span, .aciVFish.aciRight span, .aciHFish.aciTop span, .aciHFish.aciCenter span, .aciHFish.aciBottom span {
+	position:absolute;
+	font-size:11px;
+	display:noneX;
+	background-color:#666;
+	color:#FFF;
+	padding:2px 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow:0 0 5px #888;
+	-webkit-box-shadow:0 0 5px#888;
+	box-shadow:0 0 5px #888;
+	opacity:0;
+}
+/* aciVFish style */
+.aciVFish {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.aciVFish li {
+	position:relative;
+}
+.aciVFish.aciLeft img {
+	margin:10px 0 0 0;
+}
+.aciVFish.aciRight img {
+	margin:10px 0 0 20px;
+}
+.aciVFish.aciLeft span, .aciVFish.aciCenter span {
+	top:16px;
+	left:55px;
+}
+.aciVFish.aciRight span {
+	top:16px;
+	right:55px;
+}
+/* aciHFish style */
+.aciHFish {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.aciHFish li {
+	position:relative;
+	float:left;
+}
+.aciHFish.aciTop img {
+	margin:0 0 0 10px;
+}
+.aciHFish.aciBottom img {
+	margin:20px 0 0 10px;
+}
+.aciHFish.aciTop span {
+	top:55px;
+	left:5%;
+}
+.aciHFish.aciBottom span, .aciHFish.aciCenter span {
+	top:-25px;
+	left:5%;
+}
